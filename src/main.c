@@ -49,7 +49,7 @@ void config_KEYS()
     *(KEY_ptr + 2) = 15;
 }
 
-void config_timer1()
+void config_TIMER1()
 {
     int i, j;
     i = 10000000 - 1;
@@ -165,7 +165,7 @@ void hex5_hex4_mode4_5(int b)
 void main()
 {
 
-    config_timer1();
+    config_TIMER1();
     config_KEYS();
     enable_nios2_interrupts();
 
@@ -178,8 +178,8 @@ void main()
 
     while (1) //HEX display
     {
-        *LEDR_ptr = mode;
         config_KEYS();
+        *LEDR_ptr = mode;
 
         if (alarm_time == count1) {
             mode = 7;

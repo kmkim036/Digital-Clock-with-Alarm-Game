@@ -1,15 +1,18 @@
 #include "address_map_nios2.h"
 
 static volatile int* TIMER1_ptr = (int*)TIMER_BASE;
+
 extern int count1;
 extern int count1_world;
+extern int count1_1;
+extern int count2;
 
 extern int day;
 extern int year;
 extern int month;
-extern int count1_1;
-extern int count2;
+
 extern int mode;
+
 extern int run_SW;
 extern int run_timer;
 
