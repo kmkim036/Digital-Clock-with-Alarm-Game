@@ -1,11 +1,15 @@
 #include "address_map_nios2.h"
 #include "nios2_ctrl_reg_macros.h"
-/* function prototypes */
-void main(void);
-void interrupt_handler(void);
-void pushbutton_ISR(void);
 
+/* function prototypes */
+// main func in main.c
+void main(void);
+// ISR func for push button in pushbutton_ISR.c
+void pushbutton_ISR(void);
+// ISR func for timer in timer1_ISR.c
 void timer1_ISR(void);
+// interrupt handing func to call ISR func in exception_handler.c
+void interrupt_handler(void);
 
 /* The assembly language code below handles CPU reset processing */
 void the_reset(void) __attribute__((section(".reset")));
@@ -133,7 +137,6 @@ void interrupt_handler(void)
     } else if (ipending & 0x2) {
         pushbutton_ISR();
     }
-
     // else, ignore the interrupt
     return;
 }
