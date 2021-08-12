@@ -2,7 +2,7 @@
 #include "monitor.h"
 #include "nios2_ctrl_reg_macros.h"
 
-//memory mapped I/O
+// memory mapped I/O
 static volatile int* KEY_ptr = (int*)KEY_BASE;
 static volatile int* SW_ptr = (int*)SW_BASE;
 static volatile int* TIMER1_ptr = (int*)TIMER_BASE;
@@ -10,16 +10,16 @@ static volatile int* LEDR_ptr = (int*)LEDR_BASE;
 static volatile int* HEX3_HEX0_ptr = (int*)HEX3_HEX0_BASE;
 static volatile int* HEX5_HEX4_ptr = (int*)HEX5_HEX4_BASE;
 
-//global variable
+// global variable
 int mode = 1;
 int submode = 1;
 
-int count1 = 35120; //counts for 1sec, initialize 9:45:20
-int count2 = 0; //counts for 0.1sec (stopwatch,timer)
+int count1 = 35120; // counts for 1sec, initialize 9:45:20
+int count2 = 0; // counts for 0.1sec (stopwatch,timer)
 int count1_world;
 int count1_1 = 0;
 
-//default
+// default
 int year = 18;
 int month = 12;
 int day = 24;
@@ -31,7 +31,7 @@ int lapcount = 0;
 int run_timer = 0;
 int run_SW = 0;
 
-//initialize 9:45:00
+// initialize 9:45:00
 int alarm_time = 35100;
 
 int x = 160;
@@ -56,13 +56,13 @@ void config_TIMER1()
     j = i >> 16;
     *(TIMER1_ptr + 2) = i;
     *(TIMER1_ptr + 3) = j;
-    *(TIMER1_ptr + 1) = 0b0111; //set cont, start, ITO
+    *(TIMER1_ptr + 1) = 0b0111; // set cont, start, ITO
 }
 
 void enable_nios2_interrupts()
 {
     NIOS2_WRITE_IENABLE(0b11);
-    NIOS2_WRITE_STATUS(1); //enable NIOS 2 interrupt
+    NIOS2_WRITE_STATUS(1); // enable NIOS 2 interrupt
 }
 
 int seg7_code(int i)
@@ -170,13 +170,13 @@ void main()
     enable_nios2_interrupts();
 
     pixel_ctrl_ptr = (int*)PIXEL_BUF_CTRL_BASE;
-    *(pixel_ctrl_ptr + 1) = front_buffer; //first store the address in the back buffer
+    *(pixel_ctrl_ptr + 1) = front_buffer; // first store the address in the back buffer
     wait_for_vsync();
-    pixel_buffer_start = *pixel_ctrl_ptr; //set a pointer to the pixel buffer
+    pixel_buffer_start = *pixel_ctrl_ptr; // set a pointer to the pixel buffer
     clear_screen();
-    *(pixel_ctrl_ptr + 1) = back_buffer; //set a location for the back pixel buffer
+    *(pixel_ctrl_ptr + 1) = back_buffer; // set a location for the back pixel buffer
 
-    while (1) //HEX display
+    while (1) // HEX display
     {
         config_KEYS();
         *LEDR_ptr = mode;
@@ -212,22 +212,22 @@ void main()
             switch (submode) {
             case 1:
                 count1_world = count1;
-                break; //Seoul
+                break; // Seoul
             case 2:
                 count1_world = (count1 + 23 * 3600) % 86400;
-                break; //Beijing
+                break; // Beijing
             case 3:
                 count1_world = (count1 + 18 * 3600) % 86400;
-                break; //Moscow
+                break; // Moscow
             case 4:
                 count1_world = (count1 + 16 * 3600) % 86400;
-                break; //Rome
+                break; // Rome
             case 5:
                 count1_world = (count1 + 10 * 3600) % 86400;
-                break; //NY
+                break; // NY
             case 6:
                 count1_world = (count1 + 7 * 3600) % 86400;
-                break; //LA
+                break; // LA
             }
             hex3_hex0_mode1_3_6(count1_world);
             hex5_hex4_mode1_3_6(count1_world);

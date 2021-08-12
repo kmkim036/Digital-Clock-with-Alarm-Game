@@ -1,6 +1,6 @@
 #include <monitor.h>
 
-//functions for drawing
+// functions for drawing
 void swap(int* a, int* b)
 {
     int tmp = 0;
@@ -83,253 +83,253 @@ void clear_screen()
     }
 }
 
-//draw zero to nine for mode 1, 5, 6
+// draw zero to nine for mode 1, 5, 6
 void zero(int x)
 {
-    draw_line(x - 10, 100, x + 10, 100, 0xFF); //0
-    draw_line(x + 10, 100, x + 10, 140, 0xFF); //0
-    draw_line(x - 10, 100, x - 10, 140, 0xFF); //0
-    draw_line(x - 10, 140, x + 10, 140, 0xFF); //0
+    draw_line(x - 10, 100, x + 10, 100, 0xFF); // 0
+    draw_line(x + 10, 100, x + 10, 140, 0xFF); // 0
+    draw_line(x - 10, 100, x - 10, 140, 0xFF); // 0
+    draw_line(x - 10, 140, x + 10, 140, 0xFF); // 0
 }
 
 void one(int x)
 {
-    draw_line(x + 10, 100, x + 10, 140, 0xFF); //1
+    draw_line(x + 10, 100, x + 10, 140, 0xFF); // 1
 }
 
 void two(int x)
 {
-    draw_line(x - 10, 100, x + 10, 100, 0xFF); //2
-    draw_line(x + 10, 100, x + 10, 120, 0xFF); //2
-    draw_line(x - 10, 120, x + 10, 120, 0xFF); //2
-    draw_line(x - 10, 120, x - 10, 140, 0xFF); //2
-    draw_line(x - 10, 140, x + 10, 140, 0xFF); //2
+    draw_line(x - 10, 100, x + 10, 100, 0xFF); // 2
+    draw_line(x + 10, 100, x + 10, 120, 0xFF); // 2
+    draw_line(x - 10, 120, x + 10, 120, 0xFF); // 2
+    draw_line(x - 10, 120, x - 10, 140, 0xFF); // 2
+    draw_line(x - 10, 140, x + 10, 140, 0xFF); // 2
 }
 
 void three(int x)
 {
-    draw_line(x - 10, 100, x + 10, 100, 0xFF); //3
-    draw_line(x + 10, 100, x + 10, 140, 0xFF); //3
-    draw_line(x - 10, 120, x + 10, 120, 0xFF); //3
-    draw_line(x - 10, 140, x + 10, 140, 0xFF); //3
+    draw_line(x - 10, 100, x + 10, 100, 0xFF); // 3
+    draw_line(x + 10, 100, x + 10, 140, 0xFF); // 3
+    draw_line(x - 10, 120, x + 10, 120, 0xFF); // 3
+    draw_line(x - 10, 140, x + 10, 140, 0xFF); // 3
 }
 
 void four(int x)
 {
-    draw_line(x - 10, 100, x - 10, 120, 0xFF); //4
-    draw_line(x + 10, 100, x + 10, 140, 0xFF); //4
-    draw_line(x - 10, 120, x + 10, 120, 0xFF); //4
+    draw_line(x - 10, 100, x - 10, 120, 0xFF); // 4
+    draw_line(x + 10, 100, x + 10, 140, 0xFF); // 4
+    draw_line(x - 10, 120, x + 10, 120, 0xFF); // 4
 }
 
 void five(int x)
 {
-    draw_line(x - 10, 100, x + 10, 100, 0xFF); //5
-    draw_line(x - 10, 100, x - 10, 120, 0xFF); //5
-    draw_line(x - 10, 120, x + 10, 120, 0xFF); //5
-    draw_line(x + 10, 120, x + 10, 140, 0xFF); //5
-    draw_line(x - 10, 140, x + 10, 140, 0xFF); //5
+    draw_line(x - 10, 100, x + 10, 100, 0xFF); // 5
+    draw_line(x - 10, 100, x - 10, 120, 0xFF); // 5
+    draw_line(x - 10, 120, x + 10, 120, 0xFF); // 5
+    draw_line(x + 10, 120, x + 10, 140, 0xFF); // 5
+    draw_line(x - 10, 140, x + 10, 140, 0xFF); // 5
 }
 
 void six(int x)
 {
-    draw_line(x - 10, 100, x + 10, 100, 0xFF); //6
-    draw_line(x - 10, 120, x + 10, 120, 0xFF); //6
-    draw_line(x - 10, 140, x + 10, 140, 0xFF); //6
-    draw_line(x + 10, 120, x + 10, 140, 0xFF); //6
-    draw_line(x - 10, 100, x - 10, 140, 0xFF); //6
+    draw_line(x - 10, 100, x + 10, 100, 0xFF); // 6
+    draw_line(x - 10, 120, x + 10, 120, 0xFF); // 6
+    draw_line(x - 10, 140, x + 10, 140, 0xFF); // 6
+    draw_line(x + 10, 120, x + 10, 140, 0xFF); // 6
+    draw_line(x - 10, 100, x - 10, 140, 0xFF); // 6
 }
 
 void seven(int x)
 {
-    draw_line(x - 10, 100, x + 10, 100, 0xFF); //7
-    draw_line(x + 10, 100, x + 10, 140, 0xFF); //7
+    draw_line(x - 10, 100, x + 10, 100, 0xFF); // 7
+    draw_line(x + 10, 100, x + 10, 140, 0xFF); // 7
 }
 
 void eight(int x)
 {
-    draw_line(x - 10, 100, x + 10, 100, 0xFF); //8
-    draw_line(x - 10, 120, x + 10, 120, 0xFF); //8
-    draw_line(x - 10, 140, x + 10, 140, 0xFF); //8
-    draw_line(x + 10, 100, x + 10, 140, 0xFF); //8
-    draw_line(x - 10, 100, x - 10, 140, 0xFF); //8
+    draw_line(x - 10, 100, x + 10, 100, 0xFF); // 8
+    draw_line(x - 10, 120, x + 10, 120, 0xFF); // 8
+    draw_line(x - 10, 140, x + 10, 140, 0xFF); // 8
+    draw_line(x + 10, 100, x + 10, 140, 0xFF); // 8
+    draw_line(x - 10, 100, x - 10, 140, 0xFF); // 8
 }
 
 void nine(int x)
 {
-    draw_line(x - 10, 100, x + 10, 100, 0xFF); //9
-    draw_line(x - 10, 120, x + 10, 120, 0xFF); //9
-    draw_line(x - 10, 140, x + 10, 140, 0xFF); //9
-    draw_line(x + 10, 100, x + 10, 140, 0xFF); //9
-    draw_line(x - 10, 100, x - 10, 120, 0xFF); //9
+    draw_line(x - 10, 100, x + 10, 100, 0xFF); // 9
+    draw_line(x - 10, 120, x + 10, 120, 0xFF); // 9
+    draw_line(x - 10, 140, x + 10, 140, 0xFF); // 9
+    draw_line(x + 10, 100, x + 10, 140, 0xFF); // 9
+    draw_line(x - 10, 100, x - 10, 120, 0xFF); // 9
 }
 
-//draw dot for mode 5
+// draw dot for mode 5
 void dot()
 {
     FILL_PIXEL(220, 130, 0xFF, 0xFF, 0xFF);
 }
 
-//draw zero to nine for mode 2
+// draw zero to nine for mode 2
 void zero2(int x, int y)
 {
-    draw_line(x - 10, 0 + y, x + 10, +y, 0xFF); //0
-    draw_line(x + 10, 0 + y, x + 10, 40 + y, 0xFF); //0
-    draw_line(x - 10, 0 + y, x - 10, 40 + y, 0xFF); //0
-    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); //0
+    draw_line(x - 10, 0 + y, x + 10, +y, 0xFF); // 0
+    draw_line(x + 10, 0 + y, x + 10, 40 + y, 0xFF); // 0
+    draw_line(x - 10, 0 + y, x - 10, 40 + y, 0xFF); // 0
+    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); // 0
 }
 
 void one2(int x, int y)
 {
-    draw_line(x + 10, y, x + 10, 40 + y, 0xFF); //1
+    draw_line(x + 10, y, x + 10, 40 + y, 0xFF); // 1
 }
 
 void two2(int x, int y)
 {
-    draw_line(x - 10, y, x + 10, y, 0xFF); //2
-    draw_line(x + 10, y, x + 10, 20 + y, 0xFF); //2
-    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); //2
-    draw_line(x - 10, 20 + y, x - 10, 40 + y, 0xFF); //2
-    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); //2
+    draw_line(x - 10, y, x + 10, y, 0xFF); // 2
+    draw_line(x + 10, y, x + 10, 20 + y, 0xFF); // 2
+    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); // 2
+    draw_line(x - 10, 20 + y, x - 10, 40 + y, 0xFF); // 2
+    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); // 2
 }
 
 void three2(int x, int y)
 {
-    draw_line(x - 10, +y, x + 10, +y, 0xFF); //3
-    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); //3
-    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); //3
-    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); //3
+    draw_line(x - 10, +y, x + 10, +y, 0xFF); // 3
+    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); // 3
+    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); // 3
+    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); // 3
 }
 
 void four2(int x, int y)
 {
-    draw_line(x - 10, +y, x - 10, 20 + y, 0xFF); //4
-    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); //4
-    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); //4
+    draw_line(x - 10, +y, x - 10, 20 + y, 0xFF); // 4
+    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); // 4
+    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); // 4
 }
 
 void five2(int x, int y)
 {
-    draw_line(x - 10, +y, x + 10, +y, 0xFF); //5
-    draw_line(x - 10, +y, x - 10, 20 + y, 0xFF); //5
-    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); //5
-    draw_line(x + 10, 20 + y, x + 10, 40 + y, 0xFF); //5
-    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); //5
+    draw_line(x - 10, +y, x + 10, +y, 0xFF); // 5
+    draw_line(x - 10, +y, x - 10, 20 + y, 0xFF); // 5
+    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); // 5
+    draw_line(x + 10, 20 + y, x + 10, 40 + y, 0xFF); // 5
+    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); // 5
 }
 
 void six2(int x, int y)
 {
-    draw_line(x - 10, +y, x + 10, +y, 0xFF); //6
-    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); //6
-    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); //6
-    draw_line(x + 10, 20 + y, x + 10, 40 + y, 0xFF); //6
-    draw_line(x - 10, +y, x - 10, 40 + y, 0xFF); //6
+    draw_line(x - 10, +y, x + 10, +y, 0xFF); // 6
+    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); // 6
+    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); // 6
+    draw_line(x + 10, 20 + y, x + 10, 40 + y, 0xFF); // 6
+    draw_line(x - 10, +y, x - 10, 40 + y, 0xFF); // 6
 }
 
 void seven2(int x, int y)
 {
-    draw_line(x - 10, +y, x + 10, +y, 0xFF); //7
-    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); //7
+    draw_line(x - 10, +y, x + 10, +y, 0xFF); // 7
+    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); // 7
 }
 
 void eight2(int x, int y)
 {
-    draw_line(x - 10, +y, x + 10, +y, 0xFF); //8
-    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); //8
-    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); //8
-    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); //8
-    draw_line(x - 10, +y, x - 10, 40 + y, 0xFF); //8
+    draw_line(x - 10, +y, x + 10, +y, 0xFF); // 8
+    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); // 8
+    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); // 8
+    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); // 8
+    draw_line(x - 10, +y, x - 10, 40 + y, 0xFF); // 8
 }
 
 void nine2(int x, int y)
 {
-    draw_line(x - 10, +y, x + 10, +y, 0xFF); //9
-    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); //9
-    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); //9
-    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); //9
-    draw_line(x - 10, +y, x - 10, 20 + y, 0xFF); //9
+    draw_line(x - 10, +y, x + 10, +y, 0xFF); // 9
+    draw_line(x - 10, 20 + y, x + 10, 20 + y, 0xFF); // 9
+    draw_line(x - 10, 40 + y, x + 10, 40 + y, 0xFF); // 9
+    draw_line(x + 10, +y, x + 10, 40 + y, 0xFF); // 9
+    draw_line(x - 10, +y, x - 10, 20 + y, 0xFF); // 9
 }
 
-//draw zero to nine for mode 3
+// draw zero to nine for mode 3
 void zero3(int x)
 {
-    draw_line(x - 5, 180, x + 5, 180, 0xFF); //0
-    draw_line(x + 5, 180, x + 5, 220, 0xFF); //0
-    draw_line(x - 5, 180, x - 5, 220, 0xFF); //0
-    draw_line(x - 5, 220, x + 5, 220, 0xFF); //0
+    draw_line(x - 5, 180, x + 5, 180, 0xFF); // 0
+    draw_line(x + 5, 180, x + 5, 220, 0xFF); // 0
+    draw_line(x - 5, 180, x - 5, 220, 0xFF); // 0
+    draw_line(x - 5, 220, x + 5, 220, 0xFF); // 0
 }
 
 void one3(int x)
 {
-    draw_line(x + 5, 180, x + 5, 220, 0xFF); //1
+    draw_line(x + 5, 180, x + 5, 220, 0xFF); // 1
 }
 
 void two3(int x)
 {
-    draw_line(x - 5, 180, x + 5, 180, 0xFF); //2
-    draw_line(x + 5, 180, x + 5, 200, 0xFF); //2
-    draw_line(x - 5, 200, x + 5, 200, 0xFF); //2
-    draw_line(x - 5, 200, x - 5, 220, 0xFF); //2
-    draw_line(x - 5, 220, x + 5, 220, 0xFF); //2
+    draw_line(x - 5, 180, x + 5, 180, 0xFF); // 2
+    draw_line(x + 5, 180, x + 5, 200, 0xFF); // 2
+    draw_line(x - 5, 200, x + 5, 200, 0xFF); // 2
+    draw_line(x - 5, 200, x - 5, 220, 0xFF); // 2
+    draw_line(x - 5, 220, x + 5, 220, 0xFF); // 2
 }
 
 void three3(int x)
 {
-    draw_line(x - 5, 180, x + 5, 180, 0xFF); //3
-    draw_line(x + 5, 180, x + 5, 220, 0xFF); //3
-    draw_line(x - 5, 200, x + 5, 200, 0xFF); //3
-    draw_line(x - 5, 220, x + 5, 220, 0xFF); //3
+    draw_line(x - 5, 180, x + 5, 180, 0xFF); // 3
+    draw_line(x + 5, 180, x + 5, 220, 0xFF); // 3
+    draw_line(x - 5, 200, x + 5, 200, 0xFF); // 3
+    draw_line(x - 5, 220, x + 5, 220, 0xFF); // 3
 }
 
 void four3(int x)
 {
-    draw_line(x - 5, 180, x - 5, 200, 0xFF); //4
-    draw_line(x + 5, 180, x + 5, 220, 0xFF); //4
-    draw_line(x - 5, 200, x + 5, 200, 0xFF); //4
+    draw_line(x - 5, 180, x - 5, 200, 0xFF); // 4
+    draw_line(x + 5, 180, x + 5, 220, 0xFF); // 4
+    draw_line(x - 5, 200, x + 5, 200, 0xFF); // 4
 }
 
 void five3(int x)
 {
-    draw_line(x - 5, 180, x + 5, 180, 0xFF); //5
-    draw_line(x - 5, 180, x - 5, 200, 0xFF); //5
-    draw_line(x - 5, 200, x + 5, 200, 0xFF); //5
-    draw_line(x + 5, 200, x + 5, 220, 0xFF); //5
-    draw_line(x - 5, 220, x + 5, 220, 0xFF); //5
+    draw_line(x - 5, 180, x + 5, 180, 0xFF); // 5
+    draw_line(x - 5, 180, x - 5, 200, 0xFF); // 5
+    draw_line(x - 5, 200, x + 5, 200, 0xFF); // 5
+    draw_line(x + 5, 200, x + 5, 220, 0xFF); // 5
+    draw_line(x - 5, 220, x + 5, 220, 0xFF); // 5
 }
 
 void six3(int x)
 {
-    draw_line(x - 5, 180, x + 5, 180, 0xFF); //6
-    draw_line(x - 5, 200, x + 5, 200, 0xFF); //6
-    draw_line(x - 5, 220, x + 5, 220, 0xFF); //6
-    draw_line(x + 5, 200, x + 5, 220, 0xFF); //6
-    draw_line(x - 5, 180, x - 5, 220, 0xFF); //6
+    draw_line(x - 5, 180, x + 5, 180, 0xFF); // 6
+    draw_line(x - 5, 200, x + 5, 200, 0xFF); // 6
+    draw_line(x - 5, 220, x + 5, 220, 0xFF); // 6
+    draw_line(x + 5, 200, x + 5, 220, 0xFF); // 6
+    draw_line(x - 5, 180, x - 5, 220, 0xFF); // 6
 }
 
 void seven3(int x)
 {
-    draw_line(x - 5, 180, x + 5, 180, 0xFF); //7
-    draw_line(x + 5, 180, x + 5, 220, 0xFF); //7
+    draw_line(x - 5, 180, x + 5, 180, 0xFF); // 7
+    draw_line(x + 5, 180, x + 5, 220, 0xFF); // 7
 }
 
 void eight3(int x)
 {
-    draw_line(x - 5, 180, x + 5, 180, 0xFF); //8
-    draw_line(x - 5, 200, x + 5, 200, 0xFF); //8
-    draw_line(x - 5, 220, x + 5, 220, 0xFF); //8
-    draw_line(x + 5, 180, x + 5, 220, 0xFF); //8
-    draw_line(x - 5, 180, x - 5, 220, 0xFF); //8
+    draw_line(x - 5, 180, x + 5, 180, 0xFF); // 8
+    draw_line(x - 5, 200, x + 5, 200, 0xFF); // 8
+    draw_line(x - 5, 220, x + 5, 220, 0xFF); // 8
+    draw_line(x + 5, 180, x + 5, 220, 0xFF); // 8
+    draw_line(x - 5, 180, x - 5, 220, 0xFF); // 8
 }
 
 void nine3(int x)
 {
-    draw_line(x - 5, 180, x + 5, 180, 0xFF); //9
-    draw_line(x - 5, 200, x + 5, 200, 0xFF); //9
-    draw_line(x - 5, 220, x + 5, 220, 0xFF); //9
-    draw_line(x + 5, 180, x + 5, 220, 0xFF); //9
-    draw_line(x - 5, 180, x - 5, 200, 0xFF); //9
+    draw_line(x - 5, 180, x + 5, 180, 0xFF); // 9
+    draw_line(x - 5, 200, x + 5, 200, 0xFF); // 9
+    draw_line(x - 5, 220, x + 5, 220, 0xFF); // 9
+    draw_line(x + 5, 180, x + 5, 220, 0xFF); // 9
+    draw_line(x - 5, 180, x - 5, 200, 0xFF); // 9
 }
 
-//name of city for mode 3
+// name of city for mode 3
 void seoul()
 {
     draw_line(30 - 20, 180, 50 - 20, 180, 0xFF);
@@ -471,7 +471,7 @@ void rome()
     draw_line(30 + 63 - 11, 180, 30 + 63 - 11, 220, 0xFF);
 }
 
-//draw map for mode 3
+// draw map for mode 3
 void map(void)
 {
     draw_square(40, 27, 50, 30, 0xFF, 0xFF, 0xFF);
@@ -569,93 +569,93 @@ void map(void)
     draw_square(162, 145, 165, 150, 0xFF, 0xFF, 0xFF);
 }
 
-//draw zero to nine for mode 4
+// draw zero to nine for mode 4
 void zero4(int x, int y)
 {
-    draw_line(x - 5, 0 + y, x + 5, +y, 0xFF); //0
-    draw_line(x + 5, 0 + y, x + 5, 20 + y, 0xFF); //0
-    draw_line(x - 5, 0 + y, x - 5, 20 + y, 0xFF); //0
-    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); //0
+    draw_line(x - 5, 0 + y, x + 5, +y, 0xFF); // 0
+    draw_line(x + 5, 0 + y, x + 5, 20 + y, 0xFF); // 0
+    draw_line(x - 5, 0 + y, x - 5, 20 + y, 0xFF); // 0
+    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); // 0
 }
 
 void one4(int x, int y)
 {
-    draw_line(x + 5, y, x + 5, 20 + y, 0xFF); //1
+    draw_line(x + 5, y, x + 5, 20 + y, 0xFF); // 1
 }
 
 void two4(int x, int y)
 {
-    draw_line(x - 5, y, x + 5, y, 0xFF); //2
-    draw_line(x + 5, y, x + 5, 10 + y, 0xFF); //2
-    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); //2
-    draw_line(x - 5, 10 + y, x - 5, 20 + y, 0xFF); //2
-    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); //2
+    draw_line(x - 5, y, x + 5, y, 0xFF); // 2
+    draw_line(x + 5, y, x + 5, 10 + y, 0xFF); // 2
+    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); // 2
+    draw_line(x - 5, 10 + y, x - 5, 20 + y, 0xFF); // 2
+    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); // 2
 }
 
 void three4(int x, int y)
 {
-    draw_line(x - 5, +y, x + 5, +y, 0xFF); //3
-    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); //3
-    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); //3
-    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); //3
+    draw_line(x - 5, +y, x + 5, +y, 0xFF); // 3
+    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); // 3
+    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); // 3
+    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); // 3
 }
 
 void four4(int x, int y)
 {
-    draw_line(x - 5, +y, x - 5, 10 + y, 0xFF); //4
-    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); //4
-    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); //4
+    draw_line(x - 5, +y, x - 5, 10 + y, 0xFF); // 4
+    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); // 4
+    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); // 4
 }
 
 void five4(int x, int y)
 {
-    draw_line(x - 5, +y, x + 5, +y, 0xFF); //5
-    draw_line(x - 5, +y, x - 5, 10 + y, 0xFF); //5
-    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); //5
-    draw_line(x + 5, 10 + y, x + 5, 20 + y, 0xFF); //5
-    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); //5
+    draw_line(x - 5, +y, x + 5, +y, 0xFF); // 5
+    draw_line(x - 5, +y, x - 5, 10 + y, 0xFF); // 5
+    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); // 5
+    draw_line(x + 5, 10 + y, x + 5, 20 + y, 0xFF); // 5
+    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); // 5
 }
 
 void six4(int x, int y)
 {
-    draw_line(x - 5, +y, x + 5, +y, 0xFF); //6
-    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); //6
-    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); //6
-    draw_line(x + 5, 10 + y, x + 5, 20 + y, 0xFF); //6
-    draw_line(x - 5, +y, x - 5, 20 + y, 0xFF); //6
+    draw_line(x - 5, +y, x + 5, +y, 0xFF); // 6
+    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); // 6
+    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); // 6
+    draw_line(x + 5, 10 + y, x + 5, 20 + y, 0xFF); // 6
+    draw_line(x - 5, +y, x - 5, 20 + y, 0xFF); // 6
 }
 
 void seven4(int x, int y)
 {
-    draw_line(x - 5, +y, x + 5, +y, 0xFF); //7
-    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); //7
+    draw_line(x - 5, +y, x + 5, +y, 0xFF); // 7
+    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); // 7
 }
 
 void eight4(int x, int y)
 {
-    draw_line(x - 5, +y, x + 5, +y, 0xFF); //8
-    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); //8
-    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); //8
-    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); //8
-    draw_line(x - 5, +y, x - 5, 20 + y, 0xFF); //8
+    draw_line(x - 5, +y, x + 5, +y, 0xFF); // 8
+    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); // 8
+    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); // 8
+    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); // 8
+    draw_line(x - 5, +y, x - 5, 20 + y, 0xFF); // 8
 }
 
 void nine4(int x, int y)
 {
-    draw_line(x - 5, +y, x + 5, +y, 0xFF); //9
-    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); //9
-    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); //9
-    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); //9
-    draw_line(x - 5, +y, x - 5, 10 + y, 0xFF); //9
+    draw_line(x - 5, +y, x + 5, +y, 0xFF); // 9
+    draw_line(x - 5, 10 + y, x + 5, 10 + y, 0xFF); // 9
+    draw_line(x - 5, 20 + y, x + 5, 20 + y, 0xFF); // 9
+    draw_line(x + 5, +y, x + 5, 20 + y, 0xFF); // 9
+    draw_line(x - 5, +y, x - 5, 10 + y, 0xFF); // 9
 }
 
-//draw dot for mode 4
+// draw dot for mode 4
 void dot4(int y)
 {
     FILL_PIXEL(220, y + 20, 0xFF, 0xFF, 0xFF);
 }
 
-//for mode 4
+// for mode 4
 void DISPLAY4(int rrr, int rr, int r, int l, int ll, int lll, int y)
 {
     switch (rrr) {
@@ -886,11 +886,11 @@ void heart(int x)
 
 void game()
 {
-    pixel_buffer_start = *(pixel_ctrl_ptr + 1); //to draw on the back buffer
-    clear_screen(); //clear back buffer
+    pixel_buffer_start = *(pixel_ctrl_ptr + 1); // to draw on the back buffer
+    clear_screen(); // clear back buffer
     seven4(5, 5);
 
-    //ufo
+    // ufo
     draw_square(ufo_x, 10, ufo_x + 10, 12, 0xFF, 0, 0xFF);
     draw_square(ufo_x - 2, 12, ufo_x + 12, 14, 0xFF, 0, 0xFF);
     draw_square(ufo_x, 14, ufo_x + 10, 16, 0xFF, 0, 0xFF);
@@ -900,10 +900,10 @@ void game()
     if ((ufo_x + dx) <= 0)
         dx = -dx;
 
-    //man
+    // man
     draw_square(man_x - 2, 230, man_x + 2, 235, 0xFF, 0xFF, 0);
 
-    //bullet
+    // bullet
     bullet_y += dy;
     FILL_PIXEL(bullet_x, bullet_y, 0xFF, 0xFF, 0xFF);
     if (bullet_y < 0)
@@ -952,8 +952,8 @@ void modenumber()
 
 void DISPLAY(int rrr, int rr, int r, int l, int ll, int lll)
 {
-    pixel_buffer_start = *(pixel_ctrl_ptr + 1); //to draw on the back buffer
-    clear_screen(); //clear back buffer
+    pixel_buffer_start = *(pixel_ctrl_ptr + 1); // to draw on the back buffer
+    clear_screen(); // clear back buffer
     modenumber();
 
     if (mode == 3) {
@@ -962,27 +962,27 @@ void DISPLAY(int rrr, int rr, int r, int l, int ll, int lll)
         case 1:
             seoul();
             FILL_PIXEL(242, 70, 0xFF, 0x00, 0x00);
-            break; //Seoul
+            break; // Seoul
         case 2:
             beijing();
             FILL_PIXEL(230, 68, 0xFF, 0x00, 0x00);
-            break; //Beijing
+            break; // Beijing
         case 3:
             moscow();
             FILL_PIXEL(180, 40, 0xFF, 0x00, 0x00);
-            break; //Moscow
+            break; // Moscow
         case 4:
             rome();
             FILL_PIXEL(152, 60, 0xFF, 0x00, 0x00);
-            break; //London
+            break; // London
         case 5:
             ny();
             FILL_PIXEL(90, 53, 0xFF, 0x00, 0x00);
-            break; //NY
+            break; // NY
         case 6:
             la();
             FILL_PIXEL(47, 65, 0xFF, 0x00, 0x00);
-            break; //LA
+            break; // LA
         }
         FILL_PIXEL(230, 190, 0xFF, 0xFF, 0xFF);
         FILL_PIXEL(230, 210, 0xFF, 0xFF, 0xFF);
@@ -1199,7 +1199,7 @@ void DISPLAY(int rrr, int rr, int r, int l, int ll, int lll)
             break;
         }
     } else if (mode == 4) {
-        //stopwatch
+        // stopwatch
         if (sw_c == 0) {
             FILL_PIXEL(120, 110, 0xFF, 0xFF, 0xFF);
             FILL_PIXEL(120, 130, 0xFF, 0xFF, 0xFF);
@@ -1681,12 +1681,12 @@ void DISPLAY(int rrr, int rr, int r, int l, int ll, int lll)
             break;
         }
     } else {
-        //mode 1, mode 5, mode 6
+        // mode 1, mode 5, mode 6
         if (mode == 5) {
             FILL_PIXEL(120, 110, 0xFF, 0xFF, 0xFF);
             FILL_PIXEL(120, 130, 0xFF, 0xFF, 0xFF);
         } else {
-            //mode 1, mode 6
+            // mode 1, mode 6
             FILL_PIXEL(120, 110, 0xFF, 0xFF, 0xFF);
             FILL_PIXEL(120, 130, 0xFF, 0xFF, 0xFF);
             FILL_PIXEL(200, 110, 0xFF, 0xFF, 0xFF);
